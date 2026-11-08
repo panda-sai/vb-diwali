@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diwali Dhamaka</title>
+  <meta name="description" content="Blast Diwali crackers with your face expressions and hand gestures. Wink to say Happy Diwali!" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪔</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Yatra+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="stage">
+    <video id="video" playsinline muted></video>
+    <div class="vignette"></div>
+    <canvas id="fx"></canvas>
+    <canvas id="hud"></canvas>
+    <div id="flash"></div>
+    <div id="greeting">
+      <p class="sub">May the festival of lights fill your home with joy, prosperity &amp; sparkle</p>
+      <div class="diyas"><span>🪔</span><span>🪔</span><span>🪔</span><span>🪔</span><span>🪔</span></div>
+    </div>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <header class="topbar">
+    <div class="brand">🪔 <span>Diwali Dhamaka</span></div>
+    <div class="status" id="status">Loading…</div>
+    <div class="controls">
+      <button id="btnTrack" title="Show / hide tracking overlay">Tracking: on</button>
+      <button id="btnMute" title="Mute">🔊</button>
+      <button id="btnGuide" title="Show / hide guide">Guide</button>
+    </div>
+  </header>
+
+  <aside id="guide">
+    <h3>Face</h3>
+    <ul>
+      <li data-k="smile"><span class="ic">😁</span><div><b>Smile</b><small>Anar fountains <kbd>1</kbd></small><span class="meter"><i></i></span></div></li>
+      <li data-k="jaw"><span class="ic">😮</span><div><b>Open mouth</b><small>Sky rockets <kbd>2</kbd></small><span class="meter"><i></i></span></div></li>
+      <li data-k="brow"><span class="ic">🤨</span><div><b>Raise eyebrows</b><small>Chakri spinners <kbd>3</kbd></small><span class="meter"><i></i></span></div></li>
+      <li data-k="pucker"><span class="ic">😗</span><div><b>Kiss / pucker</b><small>Heart rocket <kbd>4</kbd></small><span class="meter"><i></i></span></div></li>
+    </ul>
+    <h3>Hands</h3>
+    <ul>
+      <li data-k="point"><span class="ic">☝️</span><div><b>Point up</b><small>Phuljhadi — draw in the air <kbd>drag</kbd></small></div></li>
+      <li data-k="victory"><span class="ic">✌️</span><div><b>Victory</b><small>Twin rockets <kbd>5</kbd></small></div></li>
+      <li data-k="fist"><span class="ic">✊</span><div><b>Fist</b><small>Atom bomb <kbd>6</kbd></small></div></li>
+      <li data-k="thumbup"><span class="ic">👍</span><div><b>Thumbs up</b><small>Ladi (cracker string) <kbd>7</kbd></small></div></li>
+      <li data-k="palm"><span class="ic">✋</span><div><b>Open palm</b><small>Sky shot at your hand <kbd>8</kbd></small></div></li>
+      <li data-k="love"><span class="ic">🤟</span><div><b>I love you</b><small>Rainbow ring <kbd>9</kbd></small></div></li>
+      <li data-k="thumbdown"><span class="ic">👎</span><div><b>Thumbs down</b><small>Golden willow <kbd>0</kbd></small></div></li>
+    </ul>
+    <h3>Grand finale</h3>
+    <ul>
+      <li data-k="wink" class="star"><span class="ic">😉</span><div><b>Wink</b><small>Happy Diwali! <kbd>W</kbd></small><span class="meter"><i></i></span></div></li>
+    </ul>
+  </aside>
+
+  <div id="intro">
+    <div class="card">
+      <div class="lamp">🪔</div>
+      <h1>Diwali Dhamaka</h1>
+      <p class="lead">Light up the night with your face &amp; hands. Smile, open your mouth, raise your eyebrows or show a gesture to blast different crackers — then <b>wink</b> for the grand finale.</p>
+      <button id="start" class="primary">Start camera</button>
+      <button id="demo" class="ghost">No camera? Try demo mode</button>
+      <p id="introMsg" class="msg">Everything runs on your device. No video leaves your browser.</p>
+      <p class="hint">Tip: turn your sound on 🔊 · good lighting helps tracking</p>
+    </div>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
